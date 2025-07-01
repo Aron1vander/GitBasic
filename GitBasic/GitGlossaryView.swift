@@ -69,57 +69,57 @@ struct GitGlossaryView: View {
         e. sdla,dlsa
         """),
         GitTerm(title: "Merge",
-                explanation: "Merge adalah proses menggabungkan dua branch yang berbeda menjadi satu.",
+                explanation: "Merge is the process of combining changes from one branch into another.",
                 example: "git merge feature-login",
                 howTo: """
-                1. Checkout ke branch utama: git checkout main
-                2. Jalankan perintah merge: git merge <nama-branch>
-                3. Selesaikan konflik jika ada, lalu commit perubahan.
+                1. Switch to the target branch: git checkout main
+                2. Run the merge command: git merge <branch-name>
+                3. Resolve any conflicts and commit the changes.
                 """),
 
         GitTerm(title: "Conflict",
-                explanation: "Conflict terjadi ketika dua perubahan bertentangan dan Git tidak bisa menggabungkannya secara otomatis.",
-                example: "Merge conflict di file `LoginView.swift`",
+                explanation: "A conflict happens when Git cannot automatically resolve differences between two branches.",
+                example: "Merge conflict in `LoginView.swift`",
                 howTo: """
-                1. Buka file yang mengalami konflik.
-                2. Edit bagian yang ditandai <<<<<<< dan >>>>>>>.
-                3. Setelah selesai, lakukan git add dan git commit.
+                1. Open the conflicted file.
+                2. Manually edit the sections marked with <<<<<<< and >>>>>>>.
+                3. After resolving, run git add and git commit.
                 """),
 
         GitTerm(title: "Remote",
-                explanation: "Remote adalah repositori Git yang disimpan di server lain (seperti GitHub atau GitLab).",
+                explanation: "A remote is a version of your repository hosted on the internet (like GitHub or GitLab).",
                 example: "git remote add origin https://github.com/user/repo.git",
                 howTo: """
-                1. Gunakan 'git remote -v' untuk melihat daftar remote.
-                2. Tambahkan remote baru dengan 'git remote add <name> <url>'.
-                3. Push/pull menggunakan remote name, misalnya 'git push origin main'.
+                1. Use 'git remote -v' to view remote repositories.
+                2. Add a remote: git remote add <name> <url>
+                3. Push or pull using the remote name, e.g., 'git push origin main'
                 """),
 
         GitTerm(title: "Clone",
-                explanation: "Clone adalah proses menyalin repositori remote ke komputer lokal.",
+                explanation: "Clone creates a local copy of a remote repository.",
                 example: "git clone https://github.com/user/repo.git",
                 howTo: """
-                1. Salin URL repositori dari GitHub.
-                2. Buka terminal dan jalankan: git clone <url>
-                3. Repositori akan disalin ke folder lokal.
+                1. Copy the repository URL from GitHub.
+                2. Run: git clone <url> in your terminal.
+                3. The repository will be downloaded into a new folder.
                 """),
 
         GitTerm(title: "Branch",
-                explanation: "Branch adalah cabang pengembangan dalam Git yang memungkinkan kerja paralel.",
+                explanation: "A branch lets you work on a separate line of development without affecting the main codebase.",
                 example: "git branch feature-login",
                 howTo: """
-                1. Buat branch baru: git branch <nama-branch>
-                2. Pindah ke branch tersebut: git checkout <nama-branch>
-                3. Setelah selesai, gabungkan ke main dengan merge.
+                1. Create a new branch: git branch <branch-name>
+                2. Switch to it: git checkout <branch-name>
+                3. When done, merge it into main.
                 """),
 
         GitTerm(title: "Stash",
-                explanation: "Stash menyimpan sementara perubahan yang belum di-commit agar kamu bisa berpindah branch.",
+                explanation: "Stash temporarily saves uncommitted changes so you can switch branches cleanly.",
                 example: "git stash",
                 howTo: """
-                1. Simpan perubahan: git stash
-                2. Lihat daftar stash: git stash list
-                3. Kembalikan perubahan: git stash apply atau git stash pop
+                1. Save current changes: git stash
+                2. View all stashes: git stash list
+                3. Reapply changes: git stash apply or git stash pop
                 """)
 
     ]
