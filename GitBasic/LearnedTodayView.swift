@@ -22,7 +22,7 @@ struct LearnedTodayView: View {
             
             TextEditor(text: $note)
                 .frame(height: 150)
-                .border(Color.gray.opacity(0.5), width: 1)
+                .border(Color.blue.opacity(0.5), width: 1)
                 .padding(.horizontal)
             
             Button("Save Entry") {
@@ -80,7 +80,7 @@ struct EditLearnedEntryView: View {
             .navigationTitle("Edit Entry")
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
+                    Button("Save Now!!") {
                         dismiss()
                     }
                 }
