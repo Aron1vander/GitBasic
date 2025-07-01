@@ -69,53 +69,59 @@ struct GitGlossaryView: View {
         e. sdla,dlsa
         """),
         GitTerm(title: "Merge",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Merge adalah proses menggabungkan dua branch yang berbeda menjadi satu.",
+                example: "git merge feature-login",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """),
+                1. Checkout ke branch utama: git checkout main
+                2. Jalankan perintah merge: git merge <nama-branch>
+                3. Selesaikan konflik jika ada, lalu commit perubahan.
+                """),
+
         GitTerm(title: "Conflict",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Conflict terjadi ketika dua perubahan bertentangan dan Git tidak bisa menggabungkannya secara otomatis.",
+                example: "Merge conflict di file `LoginView.swift`",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """),
+                1. Buka file yang mengalami konflik.
+                2. Edit bagian yang ditandai <<<<<<< dan >>>>>>>.
+                3. Setelah selesai, lakukan git add dan git commit.
+                """),
+
         GitTerm(title: "Remote",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Remote adalah repositori Git yang disimpan di server lain (seperti GitHub atau GitLab).",
+                example: "git remote add origin https://github.com/user/repo.git",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """),
+                1. Gunakan 'git remote -v' untuk melihat daftar remote.
+                2. Tambahkan remote baru dengan 'git remote add <name> <url>'.
+                3. Push/pull menggunakan remote name, misalnya 'git push origin main'.
+                """),
+
         GitTerm(title: "Clone",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Clone adalah proses menyalin repositori remote ke komputer lokal.",
+                example: "git clone https://github.com/user/repo.git",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """),
+                1. Salin URL repositori dari GitHub.
+                2. Buka terminal dan jalankan: git clone <url>
+                3. Repositori akan disalin ke folder lokal.
+                """),
+
         GitTerm(title: "Branch",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Branch adalah cabang pengembangan dalam Git yang memungkinkan kerja paralel.",
+                example: "git branch feature-login",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """),
+                1. Buat branch baru: git branch <nama-branch>
+                2. Pindah ke branch tersebut: git checkout <nama-branch>
+                3. Setelah selesai, gabungkan ke main dengan merge.
+                """),
+
         GitTerm(title: "Stash",
-                explanation: "A commit is a snapshot of your project at a specific time.",
-                example: "git commit -m \"Added login button\"",
+                explanation: "Stash menyimpan sementara perubahan yang belum di-commit agar kamu bisa berpindah branch.",
+                example: "git stash",
                 howTo: """
-        1. Click Integrate > Commit
-        2. Type the commit message
-        e. sdla,dlsa
-        """)
+                1. Simpan perubahan: git stash
+                2. Lihat daftar stash: git stash list
+                3. Kembalikan perubahan: git stash apply atau git stash pop
+                """)
+
     ]
     
     
